@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Report</title>
+    <link rel="stylesheet" href="css/attendance-report.css">
+</head>
+<body>
+
+<h2>Attendance Report</h2>
+
+<input type="date" id="dateFilter">
+<select id="classFilter"></select>
+
+<!-- NEW SUBJECT SELECT -->
+<select id="subjectFilter">
+    <option value="">Select Subject</option>
+</select>
+
+<button id="fetchReport">Fetch</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Student</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="reportTable"></tbody>
+</table>
+
+<script src="js/attendance-report.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Teachers</title>
+    <link rel="stylesheet" href="css/manage-teachers.css">
+</head>
+<body>
+
+<h2>Manage Teachers</h2>
+
+<!-- =========================
+     ADD / EDIT TEACHER FORM
+========================= -->
+<form id="addTeacherForm">
+
+    <!-- Hidden ID for editing -->
+    <input type="hidden" id="teacherId">
+
+    <!-- Teacher Name -->
+    <input 
+        type="text"
+        id="teacherName"
+        placeholder="Teacher Name"
+        required
+    >
+
+    <!-- Teacher Email -->
+    <input
+        type="email"
+        id="teacherEmail"
+        placeholder="Email"
+        required
+    >
+
+    <!-- Classes Selection -->
+    <label>Select Classes</label>
+
+    <small style="display:block;margin-bottom:6px;color:#555;">
+        Hold CTRL (or CMD on Mac) to select multiple classes
+    </small>
+
+    <select id="teacherClasses" multiple size="5" required></select>
+
+    <br><br>
+
+    <!-- Subjects -->
+    <label>Subjects (comma separated)</label>
+
+    <input
+        type="text"
+        id="teacherSubjects"
+        placeholder="Example: Math, Physics, Chemistry"
+        required
+    >
+
+    <!-- Buttons -->
+    <button type="submit" id="submitBtn">Add Teacher</button>
+
+    <button 
+        type="button"
+        id="cancelEditBtn"
+        style="display:none;"
+    >
+        Cancel
+    </button>
+
+</form>
+
+<hr>
+
+<!-- =========================
+        TEACHER TABLE
+========================= -->
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Classes</th>
+            <th>Subjects</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody id="teacherTable"></tbody>
+
+</table>
+
+<script src="js/manage-teachers.js"></script>
+
+</body>
+</html>

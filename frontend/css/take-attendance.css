@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+/* Dropdowns */
+select {
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+/* Camera feed */
+#attendanceCamera {
+    width: 400px;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 4px solid #ffffff;
+    background-color: #000;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+button {
+    margin: 15px 10px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#startAttendance {
+    background-color: #2ecc71;
+    color: #ffffff;
+}
+
+#startAttendance:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+#stopAttendance {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+#stopAttendance:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Attendance log */
+h3 {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+#attendanceLog {
+    list-style: none;
+    max-width: 500px;
+    margin: 15px auto 0;
+    padding: 0;
+}
+
+#attendanceLog li {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #attendanceCamera {
+        width: 100%;
+        height: auto;
+    }
+
+    select {
+        width: 100%;
+    }
+}

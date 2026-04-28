@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Class Data</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/admin-class-data.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f4f6f9;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: flex-end;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .controls div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        select, input {
+            padding: 6px;
+            min-width: 150px;
+        }
+
+        button {
+            padding: 8px 14px;
+            cursor: pointer;
+            border: none;
+            background: #1976d2;
+            color: white;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #125aa0;
+        }
+
+        table {
+            background: white;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #1976d2;
+            color: white;
+        }
+
+        th, td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>📊 Class Data Viewer</h2>
+
+<!-- ============================= -->
+<!-- 🎛 FILTER CONTROLS -->
+<!-- ============================= -->
+<div class="controls">
+
+    <!-- 📅 SINGLE DATE -->
+    <div>
+        <label>Date</label>
+        <input type="date" id="dateFilter">
+    </div>
+
+    <!-- 📅 DATE RANGE -->
+    <div>
+        <label>From</label>
+        <input type="date" id="fromDate">
+    </div>
+
+    <div>
+        <label>To</label>
+        <input type="date" id="toDate">
+    </div>
+
+    <!-- 🏫 CLASS -->
+    <div>
+        <label>Class</label>
+        <select id="classSelect">
+            <option value="">Select Class</option>
+        </select>
+    </div>
+
+    <!-- 📚 SUBJECT -->
+    <div>
+        <label>Subject</label>
+        <select id="subjectFilter">
+            <option value="">All Subjects</option>
+        </select>
+    </div>
+
+    <!-- 🔽 SORT -->
+    <div>
+        <label>Sort By</label>
+        <select id="sortOrder">
+            <option value="desc">Latest First</option>
+            <option value="asc">Oldest First</option>
+        </select>
+    </div>
+
+    <!-- 🔍 LOAD BUTTON -->
+    <div>
+        <button id="loadStudents">Load Attendance</button>
+    </div>
+
+    <!-- 📥 DOWNLOAD BUTTON -->
+    <div>
+        <button id="downloadExcel">Download Excel</button>
+    </div>
+
+</div>
+
+<hr>
+
+<!-- ============================= -->
+<!-- 📊 ATTENDANCE TABLE -->
+<!-- ============================= -->
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Roll No</th>
+            <th>Subject</th>
+            <th>Status</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+
+    <tbody id="studentTable">
+        <tr>
+            <td colspan="5">Select filters to view attendance</td>
+        </tr>
+    </tbody>
+
+</table>
+
+<!-- ============================= -->
+<!-- 📦 LIBRARIES -->
+<!-- ============================= -->
+
+<!-- Excel Export -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<!-- Main JS -->
+<script src="js/admin-class-data.js"></script>
+
+</body>
+</html>

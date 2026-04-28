@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <form action="/login" method="post">
+
+            <label for="email">Email / Username</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Role is optional (backend can detect) -->
+            <!-- <input type="hidden" name="role"> -->
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <div class="forgot">
+            <a href="forgot-password.html">Forgot password?</a>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

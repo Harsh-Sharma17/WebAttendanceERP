@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Attendance</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/take-attendance.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Face Recognition Attendance</h2>
+
+        <!-- Class & Subject Selection -->
+        <div class="selection-area">
+
+            <select id="classSelect">
+                <option value="">Select Class</option>
+            </select>
+
+            <select id="subjectSelect">
+                <option value="">Select Subject</option>
+            </select>
+
+        </div>
+
+        <br>
+
+        <!-- Camera -->
+        <div class="camera-area">
+            <video id="attendanceCamera" width="600" height="450" autoplay muted playsinline>
+            </video>
+        </div>
+
+        <br>
+
+        <!-- Buttons -->
+        <div class="button-area">
+            <button id="startAttendance">Start Attendance</button>
+            <button id="stopAttendance">Stop Attendance</button>
+        </div>
+
+        <br>
+
+        <!-- Attendance Logs -->
+        <div class="log-area">
+
+            <h3>Attendance Log</h3>
+            <ul id="attendanceLog"></ul>
+
+        </div>
+
+    </div>
+
+    <!-- Face API (must load first) -->
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+    <!-- Attendance Script -->
+    <script src="js/take-attendance.js"></script>
+
+</body>
+
+</html>

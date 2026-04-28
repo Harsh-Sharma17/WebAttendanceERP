@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background */
+body {
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    padding: 30px;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Welcome text */
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+#teacherName {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Classes section */
+div {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+div h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Class list */
+#classList {
+    list-style: none;
+}
+
+#classList li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e9f1ff;
+    border-left: 5px solid #007bff;
+    border-radius: 6px;
+    color: #333;
+}
+
+/* Links */
+a {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto 12px auto;
+    padding: 12px;
+    text-align: center;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}

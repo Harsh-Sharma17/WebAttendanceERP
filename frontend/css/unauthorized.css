@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page layout */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #8e0e00, #1f1c18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Message */
+p {
+    font-size: 18px;
+    opacity: 0.9;
+}

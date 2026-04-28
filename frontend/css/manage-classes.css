@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background */
+body {
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    padding: 30px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* Form */
+form {
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #007bff;
+}
+
+/* Button */
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Class list */
+#classList {
+    max-width: 400px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+#classList li {
+    background-color: #ffffff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 5px solid #007bff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    font-size: 15px;
+    color: #333;
+}
+
+/* Hover effect */
+#classList li:hover {
+    background-color: #e9f1ff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    form, #classList {
+        width: 100%;
+    }
+}

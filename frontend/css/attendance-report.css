@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background */
+body {
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 26px;
+}
+
+/* Filters */
+input[type="date"],
+select {
+    padding: 10px;
+    margin: 10px 5px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input[type="date"]:focus,
+select:focus {
+    border-color: #007bff;
+}
+
+/* Fetch button */
+#fetchReport {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#fetchReport:hover {
+    background-color: #0056b3;
+}
+
+/* Table */
+table {
+    width: 80%;
+    margin: 25px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: 15px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f6ff;
+}
+
+tbody tr:hover {
+    background-color: #e9f1ff;
+}
+
+/* Status coloring (optional use) */
+.present {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.absent {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    input[type="date"],
+    select {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
