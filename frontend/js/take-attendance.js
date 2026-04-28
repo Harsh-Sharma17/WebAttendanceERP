@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const stopBtn = document.getElementById("stopAttendance");
     const logBox = document.getElementById("attendanceLog");
 
-    const API_BASE = "http://localhost:5000/api";
+    const API_BASE = "https://webattendanceerp.onrender.com/api";
 
     let stream = null;
     let faceMatcher = null;

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const classSelect = document.getElementById("classSelect");
     const subjectSelect = document.getElementById("subjectSelect");
 
-    const API_URL = "http://localhost:5000/api/teachers/me";
+    const API_URL = "https://webattendanceerp.onrender.com/api/teachers/me";
 
     let cameraAccess = false;
     let stream = null;

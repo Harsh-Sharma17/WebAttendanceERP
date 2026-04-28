@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // ✅ Clear old table data
         attendanceTable.innerHTML = "";
 
-        const res = await fetch("http://localhost:5000/api/students/my-attendance", {
+        const res = await fetch("https://webattendanceerp.onrender.com/api/students/my-attendance", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

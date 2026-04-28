@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        const response = await fetch("http://localhost:5000/api/teachers/me", {
+        const response = await fetch("https://webattendanceerp.onrender.com/api/teachers/me", {
             headers: {
                 "Authorization": "Bearer " + token
             }

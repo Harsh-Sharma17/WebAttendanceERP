@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Call backend forgot-password endpoint
-        fetch("http://localhost:5000/api/forgot-password", {
+        fetch("https://webattendanceerp.onrender.com/api/forgot-password", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

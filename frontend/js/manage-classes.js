@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const classList = document.getElementById("classList");
     const addClassForm = document.getElementById("addClassForm");
 
-    const API_URL = "http://localhost:5000/api/classes";
+    const API_URL = "https://webattendanceerp.onrender.com/api/classes";
 
     // ✅ GET TOKEN
     const token = localStorage.getItem("token");

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 📊 Fetch dashboard data
-    fetch("http://localhost:5000/api/dashboard", {
+    fetch("https://webattendanceerp.onrender.com/api/dashboard", {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token,

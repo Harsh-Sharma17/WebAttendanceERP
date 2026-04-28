@@ -8,11 +8,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // =========================
-  // CONFIG (🔥 FIXED)
+  // 🔥 CONFIG (PRODUCTION FIX)
   // =========================
+  const BASE_URL = "https://webattendanceerp.onrender.com/api";
+
   const MODEL_URL = "/models";
-  const STUDENT_API = "/api/students";
-  const CLASS_API = "/api/classes";
+  const STUDENT_API = `${BASE_URL}/students`;
+  const CLASS_API = `${BASE_URL}/classes`;
 
   // =========================
   // ELEMENTS
@@ -168,12 +170,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       studentClass.innerHTML = `<option value="">-- Select Class --</option>`;
 
-      if (!data.classes || data.classes.length === 0) {
-        console.warn("⚠️ No classes found");
-        return;
-      }
-
-      data.classes.forEach(cls => {
+      data.classes?.forEach(cls => {
         const option = document.createElement("option");
         option.value = cls._id;
         option.textContent = cls.className;
@@ -182,7 +179,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } catch (err) {
       console.error("❌ Class load error:", err);
-      alert("Failed to load classes");
     }
   }
 
@@ -199,9 +195,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       studentTable.innerHTML = "";
 
-      if (!data.students) return;
-
-      data.students.forEach(addRow);
+      data.students?.forEach(addRow);
 
     } catch (err) {
       console.error("❌ Student load error:", err);
@@ -244,7 +238,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } catch (err) {
       console.error("❌ Add student error:", err);
-      alert("Failed to add student");
     }
   });
 
@@ -266,7 +259,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } catch (err) {
       console.error("❌ Delete error:", err);
-      alert("Delete failed");
     }
   }
 

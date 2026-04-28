@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
 
-        fetch("http://localhost:5000/api/auth/login", {
+        fetch("https://webattendanceerp.onrender.com/api/auth/login", {
             method: "POST", 
             headers: {
                 "Content-Type": "application/json"

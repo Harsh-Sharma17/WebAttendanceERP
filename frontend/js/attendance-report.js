@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const API_BASE = "http://localhost:5000/api";
+    const API_BASE = "https://webattendanceerp.onrender.com/api";
 
     const classFilter = document.getElementById("classFilter");
     const subjectFilter = document.getElementById("subjectFilter");

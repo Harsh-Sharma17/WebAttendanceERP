@@ -11,8 +11,8 @@ const teacherTable = document.getElementById("teacherTable");
 const submitBtn = document.getElementById("submitBtn");
 const cancelEditBtn = document.getElementById("cancelEditBtn");
 
-const API_URL = "http://localhost:5000/api/teachers";
-const CLASS_API = "http://localhost:5000/api/classes";
+const API_URL = "https://webattendanceerp.onrender.com/api/teachers";
+const CLASS_API = "https://webattendanceerp.onrender.com/api/classes";
 
 
 // =========================

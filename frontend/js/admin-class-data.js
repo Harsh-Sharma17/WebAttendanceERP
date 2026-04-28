@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const downloadBtn = document.getElementById("downloadExcel");
     const studentTable = document.getElementById("studentTable");
 
-    const API_BASE = "http://localhost:5000/api";
+    const API_BASE = "https://webattendanceerp.onrender.com/api";
     const token = localStorage.getItem("token");
 
     let attendanceData = [];
