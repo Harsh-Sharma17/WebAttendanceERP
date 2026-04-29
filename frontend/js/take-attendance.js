@@ -19,12 +19,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const studentMap = {};
     const token = localStorage.getItem("token");
 
-    // ==========================
     // 🔐 LOGIN CHECK
-    // ==========================
     if (!token) {
         alert("Login first");
-        window.location.href = "/login.html";
+        window.location.href = "/index.html";
         return;
     }
 
@@ -86,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // ==========================
-    // 👨‍🏫 LOAD TEACHER DATA
+    // 👨‍🏫 LOAD TEACHER DATA (FIXED)
     // ==========================
     async function loadTeacher() {
         try {
@@ -94,24 +92,40 @@ document.addEventListener("DOMContentLoaded", async () => {
                 headers: { Authorization: `Bearer ${token}` }
             });
 
-            const teacher = await res.json();
+            const data = await res.json();
+            console.log("TEACHER DATA:", data); // 🔥 DEBUG
+
+            if (!res.ok) {
+                throw new Error(data.message || "Failed to load teacher");
+            }
+
+            // ✅ FIX: handle both structures
+            const teacher = data.teacher || data;
+
+            const classes = Array.isArray(teacher.classes) ? teacher.classes : [];
+            const subjects = Array.isArray(teacher.subjects) ? teacher.subjects : [];
 
             classSelect.innerHTML = "<option value=''>Select Class</option>";
             subjectSelect.innerHTML = "<option value=''>Select Subject</option>";
 
-            teacher.classes.forEach(c => {
+            // ✅ Classes
+            classes.forEach(c => {
                 const opt = document.createElement("option");
-                opt.value = c._id;
-                opt.textContent = c.className;
+                opt.value = c._id || c;
+                opt.textContent = c.className || c;
                 classSelect.appendChild(opt);
             });
 
-            teacher.subjects.forEach(s => {
+            // ✅ Subjects
+            subjects.forEach(s => {
                 const opt = document.createElement("option");
                 opt.value = s;
                 opt.textContent = s;
                 subjectSelect.appendChild(opt);
             });
+
+            if (classes.length === 0) log("⚠️ No classes found");
+            if (subjects.length === 0) log("⚠️ No subjects found");
 
         } catch (err) {
             console.error(err);
@@ -191,7 +205,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 student: match.label,
                                 class: classSelect.value,
                                 subject: subjectSelect.value,
-                                status: "present"   // 🔥 IMPORTANT (lowercase)
+                                status: "present"
                             })
                         });
 
